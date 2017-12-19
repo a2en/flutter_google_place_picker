@@ -2,10 +2,9 @@
 
 Google place picker for flutter.
 
+##currently this plugin only support android
 
 ## Getting Started
-
-For help getting started with Flutter, view our online [documentation](http://flutter.io/).
 
 Add dependancy:
 ```yaml
@@ -16,7 +15,7 @@ dependencies:
     sdk: flutter
   flutter_google_place_picker: <last-version>
 ```
-
+asynchronously call launchPlacePicker which returns a hashmap containing place details:
 ```dart 
 PickPlace() async {
     Map place;
@@ -59,6 +58,8 @@ Edit AndroidManifest.xml and add api key
 
 For IOS:
 
-Currently this plugin doesn't support ios
+Need help with ios
+
+For help getting started with Flutter, view our online [documentation](http://flutter.io/).
 
 For help on editing plugin code, view the [documentation](https://flutter.io/platform-plugins/#edit-code).
