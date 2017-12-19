@@ -51,7 +51,7 @@ Edit AndroidManifest.xml and add api key
 <application>
 <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDJABBjxhd4EnrJTml5ImCcZN2hLVKC0t0"/>
+            android:value="Your API key"/>
 </application>
 
 ```
