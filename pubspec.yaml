@@ -1,8 +1,8 @@
 name: flutter_google_place_picker
-description: A new flutter plugin project.
+description: Google place picker widgets for flutter.
 version: 0.0.1
-author: ameen ahsan
-homepage:
+author: ameen ahsan < a2@codeslayers.in >
+homepage:https://github.com/a2en/flutter_google_place_picker
 
 dependencies:
   flutter:
