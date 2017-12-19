@@ -7,6 +7,7 @@ Google place picker for flutter.
 
 For help getting started with Flutter, view our online [documentation](http://flutter.io/).
 
+Add dependancy:
 ```yaml
 # pubspec.yaml
 
@@ -16,16 +17,48 @@ dependencies:
   flutter_google_place_picker: <last-version>
 ```
 
-```dart
+```dart 
+PickPlace() async {
+    Map place;
+    // Platform messages may fail, so we use a try/catch PlatformException.
+    try {
+      place = await FlutterGooglePlacePicker.launchPlacePicker;
+    } on PlatformException {
+      
+    }
 
-const kGoogleApiKey = "API_KEY";
+    // If the widget was removed from the tree while the asynchronous platform
+    // message was in flight, we want to discard the reply rather than calling
+    // setState to update our non-existent appearance.
+    if (!mounted)
+      return;
 
-Prediction p = await showGooglePlacesAutocomplete(
-                          context: context,
-                          apiKey: kGoogleApiKey,
-                          mode: Mode.overlay, // Mode.fullscreen
-                          language: "fr",
-                          components: [new Component(Component.country, "fr")]);
+    setState(() {
+      /*get values inside the map 
+      place["name"];......
+      */
+     _place =  place.toString();
+    });
+  }
+
 
 ```
+
+For Android:
+
+Edit AndroidManifest.xml and add api key
+
+```xml
+<application>
+<meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDJABBjxhd4EnrJTml5ImCcZN2hLVKC0t0"/>
+</application>
+
+```
+
+For IOS:
+
+Currently this plugin doesn't support ios
+
 For help on editing plugin code, view the [documentation](https://flutter.io/platform-plugins/#edit-code).
