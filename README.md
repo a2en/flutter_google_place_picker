@@ -1,4 +1,4 @@
-# flutter_google_place_picker
+# flutter google place picker
 
 Google place picker for flutter.
 
